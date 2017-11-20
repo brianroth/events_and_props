@@ -37,7 +37,7 @@ export default {
   filters: {
     lengthFormat: function (value) {
       if (!value) return ''
-      return  Math.floor(value / 60) + ':' + value % 60
+      return  Math.floor(value / 60) + ':' + (value % 60).toString().padStart(2, '0');
     }
   }
 }
